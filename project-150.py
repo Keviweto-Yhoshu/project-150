@@ -39,12 +39,13 @@ def random_country_capital():
     random_no1 = random.randint(0, length1-1)
     random_country["text"] = str(random_no1)
     generated_country = list_country[random_no1]
-    country_list["text"]="Random Country : " + str(generated_country)
+    random_country["text"]="Random Country : " + str(generated_country)
+    
     length2 = len(list_capital)
     random_no2 = random.randint(0, length2-1)
     random_capital["text"] = str(random_no2)
     generated_capital = list_capital[random_no2]
-    capital_list["text"]="Random Country : " + str(generated_capital)
+    random_capital["text"]="Random Capital : " + str(generated_capital)
     
 
 
@@ -55,13 +56,9 @@ btn.place(relx = 0.5, rely=0.4, anchor = CENTER)
 country_list.place(relx = 0.5, rely = 0.5, anchor = CENTER)
 capital_list.place(relx = 0.5, rely = 0.6, anchor = CENTER)
 
-btn2 = Button(root, text="Generate Random Country And Capital?" , command = random_country_capital)
+btn2 = Button(root, text="Generate Random Country And Capital" , command = random_country_capital)
 btn2.place(relx = 0.5, rely = 0.7, anchor = CENTER)
 
-random_country.place(relx= 0.5, rely = 0.7, anchor = CENTER)
-random_capital.place(relx= 0.5, rely = 0.8, anchor = CENTER)
-
-random_country.place(relx=0.5, rely=0.9, anchor = CENTER)
-random_capital.place(relx=0.5, rely=0.10, anchor = CENTER)
-
+random_country.place(relx= 0.5, rely = 0.8, anchor = CENTER)
+random_capital.place(relx= 0.5, rely = 0.9, anchor = CENTER)
 root.mainloop()
